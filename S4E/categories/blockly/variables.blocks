@@ -80,10 +80,11 @@ Blockly.Blocks['variables_set'] = {
      */
     init: function() {
         this.contextMenuMsg_ = Blockly.Msg.VARIABLES_SET_CREATE_GET;
+	console.log(messages["VARIABLES_SET"].substring(0, messages["VARIABLES_SET"].indexOf('%1')));
         this.appendValueInput("VALUE")
-            .appendField(Blockly.Msg["VARIABLES_SET"].substring(0, Blockly.Msg["VARIABLES_SET"].indexOf('%1')))
+            .appendField(messages["VARIABLES_SET"].substring(0, messages["VARIABLES_SET"].indexOf('%1')))
             .appendField(new Blockly.FieldVariable(Blockly.Msg.VARIABLES_DEFAULT_NAME), 'VAR')
-            .appendField(Blockly.Msg["VARIABLES_SET"].substring(Blockly.Msg["VARIABLES_SET"].indexOf('%1') + 2, Blockly.Msg["VARIABLES_SET"].indexOf('%2')));
+            .appendField(messages["VARIABLES_SET"].substring(messages["VARIABLES_SET"].indexOf('%1') + 2, messages["VARIABLES_SET"].indexOf('%2')));
         this.setPreviousStatement(true, null);
         this.setNextStatement(true, null);
         this.setTooltip(Blockly.Msg.VARIABLES_SET_TOOLTIP);
@@ -111,14 +112,14 @@ Blockly.Blocks['variables_set_scope'] = {
     init: function() {
         this.contextMenuMsg_ = Blockly.Msg.VARIABLES_SET_CREATE_GET;
         this.appendValueInput("VALUE")
-            .appendField(Blockly.Msg["VARIABLES_SET"].substring(0, Blockly.Msg["VARIABLES_SET"].indexOf('%1')))
+            .appendField(messages["VARIABLES_SET"].substring(0, messages["VARIABLES_SET"].indexOf('%1')))
             .appendField(new Blockly.FieldVariable(Blockly.Msg.VARIABLES_DEFAULT_NAME), 'VAR')
             .appendField(Blockly.Msg.VARIABLES_AS)
             .appendField(new Blockly.FieldDropdown([
                 [Blockly.Msg["VARIABLES_SET_SCOPE_GLOBAL"], "G"],
                 [Blockly.Msg["VARIABLES_SET_SCOPE_LOCAL"], "L"]
             ]), "SCOPE")
-            .appendField(Blockly.Msg["VARIABLES_SET"].substring(Blockly.Msg["VARIABLES_SET"].indexOf('%1') + 2, Blockly.Msg["VARIABLES_SET"].indexOf('%2')));
+            .appendField(messages["VARIABLES_SET"].substring(messages["VARIABLES_SET"].indexOf('%1') + 2, messages["VARIABLES_SET"].indexOf('%2')));
         this.setPreviousStatement(true, null);
         this.setNextStatement(true, null);
         this.setTooltip(Blockly.Msg.VARIABLES_SET_TOOLTIP);

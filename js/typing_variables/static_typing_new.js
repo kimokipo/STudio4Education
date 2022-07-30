@@ -48,6 +48,7 @@ Blockly.StaticTyping.prototype.collectVarsWithTypes = function(workspace) {
     var blockVarAndTypes = Blockly.StaticTyping.getBlockVars(blocks[i]);
     for (var j = 0; j < blockVarAndTypes.length; j++) {
       var variableName = blockVarAndTypes[j][0];
+	console.log(variableName);
       var variableType = blockVarAndTypes[j][1];
       var variableDeclaration = blockVarAndTypes[j][2];
       var variableProcedure = blockVarAndTypes[j][3];
@@ -166,6 +167,7 @@ Blockly.StaticTyping.getBlockVars = function(block) {
     for (var i = 0; i < blockVariables.length; i++) {
       // var varName = blockVariables[i];
       var varName = Blockly.Variables.getVariable(block.workspace,blockVariables[i]).name;
+	console.log(varName);
       var getVarType = block.getVarType;
       if (getVarType) {
         var varType = getVarType.call(block, varName);

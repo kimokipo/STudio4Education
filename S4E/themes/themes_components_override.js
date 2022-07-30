@@ -14,6 +14,7 @@
 // Blockly.Themes.Classic.setComponentStyle('flyoutBackgroundColour', '#000000');
 // Blockly.Themes.Classic.setComponentStyle('flyoutForegroundColour', '#000000');
 
+/*
 //Classic Theme
 Blockly.Themes.Classic.setComponentStyle('flyoutOpacity', 0);
 Blockly.Themes.Classic.setComponentStyle('toolboxBackgroundColour', '#FFFFFF');
@@ -42,6 +43,8 @@ Blockly.Themes.Tritanopia.setComponentStyle('flyoutForegroundColour', '#FFFFFF')
 Blockly.Themes.Tritanopia.setComponentStyle('flyoutBackgroundColour', '#FFFFFF');
 Blockly.Themes.Tritanopia.setComponentStyle('scrollbarColour', '#000000');
 Blockly.Themes.Tritanopia.setComponentStyle('scrollbarOpacity', '0.5');
+*/
+
 //Zelos theme
 Blockly.Themes.Zelos.setComponentStyle('flyoutOpacity', 0);
 Blockly.Themes.Zelos.setComponentStyle('toolboxBackgroundColour', '#FFFFFF');
@@ -49,6 +52,8 @@ Blockly.Themes.Zelos.setComponentStyle('flyoutForegroundColour', '#FFFFFF');
 Blockly.Themes.Zelos.setComponentStyle('flyoutBackgroundColour', '#FFFFFF');
 Blockly.Themes.Zelos.setComponentStyle('scrollbarColour', '#000000');
 Blockly.Themes.Zelos.setComponentStyle('scrollbarOpacity', '0.5');
+
+/*
 //High Contrast theme
 Blockly.Themes.HighContrast.setComponentStyle('flyoutOpacity', 0);
 Blockly.Themes.HighContrast.setComponentStyle('toolboxBackgroundColour', '#FFFFFF');
@@ -56,3 +61,4 @@ Blockly.Themes.HighContrast.setComponentStyle('flyoutForegroundColour', '#FFFFFF
 Blockly.Themes.HighContrast.setComponentStyle('flyoutBackgroundColour', '#FFFFFF');
 Blockly.Themes.HighContrast.setComponentStyle('scrollbarColour', '#000000');
 Blockly.Themes.HighContrast.setComponentStyle('scrollbarOpacity', '0.5');
+*/

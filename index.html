@@ -1243,23 +1243,25 @@
     </div>
     <!-- Blockly libraries -->
     <script src="./@blockly/blockly_compressed.js"></script>
+    <script src="./S4E/msg/categories_en.js"></script>
+    <script src="./S4E/msg/blocks_en.js"></script>
     <script src="./@blockly/closure/goog/base.js"></script>
     <!-- needed for automatic variable typing -->
     <script src="js/typing_variables/type.js"></script>
     <script src="js/typing_variables/types.js"></script>
-    <script src="js/typing_variables/static_typing.js"></script>
+    <script src="js/typing_variables/static_typing_new.js"></script>
     <script src="js/typing_variables/instances.js"></script>
     <script src="js/typing_variables/field_instance.js"></script>
     <script src="js/typing_variables/block_instance.js"></script>
     <!-- Blockly libraries for themes and renderers -->
-    <script src="./@blockly/core/workspace_comment.js"></script>
-    <script src="./@blockly/core/workspace_comment_svg.js"></script>
+    <script type="text/javascript">goog.require('Blockly.WorkspaceComment');</script>
+    <script type="text/javascript">goog.require('Blockly.WorkspaceCommentSvg');</script>
     <script src="./@blockly/core/workspace_comment_render_svg.js"></script>
-    <script src="./@blockly/core/renderers/minimalist/info.js" async></script>
-    <script src="./@blockly/core/renderers/minimalist/constants.js" async></script>
-    <script src="./@blockly/core/renderers/minimalist/drawer.js" async></script>
-    <script src="./@blockly/core/renderers/minimalist/renderer.js" async></script>
-    <script src="./@blockly/core/theme/zelos.js" async></script>
+    <script type="text/javascript">goog.require('Blockly.minimalist.RenderInfo');</script>
+    <script type="text/javascript">goog.require('Blockly.minimalist.ConstantProvider');</script>
+    <script type="text/javascript">goog.require('Blockly.minimalist.Drawer');</script>
+    <script type="text/javascript">goog.require('Blockly.minimalist.Renderer');</script>
+    <script type="text/javascript">goog.require('Blockly.Themes.Zelos');</script>
     <!-- Blockly plugins -->
     <script src="./@blockly/plugins/content-highlight/index.js"></script>
     <!-- <script src="./@blockly/plugins/continuous-toolbox/index.js"></script> -->
@@ -1403,6 +1405,8 @@
     <script src="./S4E/categories/ESP/wifi_esp_uart/wifi_esp_uart.arduino"></script>
     <script src="./S4E/categories/ESP/wifi_esp_server/wifi_esp_server.arduino"></script>
     <script src="./S4E/categories/X-NUCLEO-IKS01A3/X-NUCLEO-IKS01A3.arduino"></script>
+
+
     <script>
         // require('../resources/app.asar/Arrowhead.js');
         // require('../resources/app.asar/renderer.js');

@@ -157,6 +157,7 @@ Blockly.Arduino.init = function(workspace) {
 
     // Set variable declarations with their Arduino type in the defines dictionary
     for (var varName in varsWithTypes) {
+	console.log(varName);
         if (varsWithTypes[varName]) {
             if (Array.isArray(varsWithTypes[varName])){
                     var type = varsWithTypes[varName][0][0];

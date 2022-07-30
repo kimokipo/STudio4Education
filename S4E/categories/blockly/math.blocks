@@ -181,7 +181,7 @@ Blockly.defineBlocksWithJsonArray([ // BEGIN JSON EXTRACT
         "mutator": "math_is_divisibleby_mutator"
     },
 
-    // Block for adding to a variable in place.
+   /* // Block for adding to a variable in place.
     {
         "type": "math_change",
         "message0": "%{BKY_MATH_CHANGE_TITLE}",
@@ -201,7 +201,7 @@ Blockly.defineBlocksWithJsonArray([ // BEGIN JSON EXTRACT
         "style": "variable_blocks",
         "helpUrl": "%{BKY_MATH_CHANGE_HELPURL}",
         "extensions": ["math_change_tooltip"]
-    },
+    },*/
 
     // Block for rounding functions.
     {

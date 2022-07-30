@@ -9,6 +9,7 @@
  * @author scanet@libreduc.cc (Sébastien CANET)
  */
 
+/*
 //Classic Theme
 Blockly.Themes.Classic.categoryStyles['backpack_category'] = {
     "colour": "#B4BCC0"
@@ -111,6 +112,8 @@ Blockly.Themes.Tritanopia.categoryStyles['DHT_category'] = {
 Blockly.Themes.Tritanopia.categoryStyles['esp_category'] = {
     "colour": "#E7352C"
 };
+*/
+
 //Zelos theme
 Blockly.Themes.Zelos.categoryStyles['backpack_category'] = {
     "colour": "#B4BCC0"
@@ -145,6 +148,8 @@ Blockly.Themes.Zelos.categoryStyles['DHT_category'] = {
 Blockly.Themes.Zelos.categoryStyles['esp_category'] = {
     "colour": "#E7352C"
 };
+
+/*
 //High Contrast theme
 Blockly.Themes.HighContrast.categoryStyles['backpack_category'] = {
     "colour": "#7C8488"
@@ -179,3 +184,4 @@ Blockly.Themes.HighContrast.categoryStyles['DHT_category'] = {
 Blockly.Themes.HighContrast.categoryStyles['esp_category'] = {
     "colour": "#E7352C"
 };
+*/

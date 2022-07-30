@@ -22,7 +22,10 @@ Blockly.Arduino['variables_get'] = function(block) {
 
 Blockly.Arduino['variables_set'] = function(block) {
     var argument0 = Blockly.Arduino.valueToCode(block, 'VALUE', Blockly.Arduino.ORDER_ASSIGNMENT) || '0';
-    var varName = Blockly.Arduino.nameDB_.getName(block.getFieldValue('VAR'), Blockly.Variables.NAME_TYPE);
+    console.log(block.getFieldValue('VAR'));
+    // var varName = Blockly.Arduino.nameDB_.getName(block.getFieldValue('VAR'), Blockly.Variables.NAME_TYPE);
+    var varName = Blockly.Variables.getVariable(block.workspace,block.getFieldValue('VAR')).name;
+	console.log(varName);
     return (varName + ' = ' + argument0 + ';\n');
 };
 
@@ -30,14 +33,16 @@ Blockly.Arduino['variables_set'] = function(block) {
 Blockly.Arduino['variables_set_scope'] = function(block) {
 	console.log("block");
     var argument0 = Blockly.Arduino.valueToCode(block, 'VALUE', Blockly.Arduino.ORDER_ASSIGNMENT) || '0';
-    var varName = Blockly.Arduino.nameDB_.getName(block.getFieldValue('VAR'), Blockly.Variables.NAME_TYPE);
+    // var varName = Blockly.Arduino.nameDB_.getName(block.getFieldValue('VAR'), Blockly.Variables.NAME_TYPE);
+    var varName = Blockly.Variables.getVariable(block.workspace,block.getFieldValue('VAR')).name;
     var result = varName + ' = ' + argument0 + ';\n';
     var scope = block.getFieldValue('SCOPE');
 		      
     if (scope && scope.startsWith('L') && Blockly.Arduino.TypeVarLocalFun[varName]) {
     	console.log("L");
 	    for (var i = 0; i < Blockly.Arduino.TypeVarLocalFun[varName].length; i++){
-    	console.log("for");	 
+    	console.log("for");
+    	console.log(Blockly.Arduino.TypeVarLocalFun[varName].length);	 
     	   
 	    	var varType = Blockly.Arduino.TypeVarLocalFun[varName][i][0];
 	    	var varProc = Blockly.Arduino.TypeVarLocalFun[varName][i][1];
@@ -59,10 +64,10 @@ Blockly.Arduino['variables_set_scope'] = function(block) {
 		      collisionLabel);
               }
               		
-		    if (block.id === idBlock){
 		    	var collisionLabel = "collision of a local variables";
 			block.setWarningText(null,
 		      collisionLabel);
+		    if (block.id === idBlock){
 		    	if (varType){
 			    	result = varType + ' '+ result;
 			 }
@@ -87,7 +92,8 @@ Blockly.Arduino['variables_set_type'] = function(block) {
 
 Blockly.Arduino['variables_const'] = function(block) {
     var argument0 = Blockly.Arduino.valueToCode(block, 'VALUE', Blockly.Arduino.ORDER_ASSIGNMENT) || '0';
-    var varName = Blockly.Arduino.nameDB_.getName(block.getFieldValue('VAR'), Blockly.Variables.NAME_TYPE);
+    // var varName = Blockly.Arduino.nameDB_.getName(block.getFieldValue('VAR'), Blockly.Variables.NAME_TYPE);
+    var varName = Blockly.Variables.getVariable(block.workspace,block.getFieldValue('VAR')).name;
     var typeBlock = Blockly.Arduino.getArduinoType_(Blockly.Types.getChildBlockType(block));
     Blockly.Arduino.variables_[block.getFieldValue('VAR')] = 'const ' + typeBlock + ' ' + varName + ' = ' + argument0 + ';';
     return '';
@@ -95,7 +101,8 @@ Blockly.Arduino['variables_const'] = function(block) {
 
 Blockly.Arduino['variables_set_init'] = function(block) {
     var argument0 = Blockly.Arduino.valueToCode(block, 'VALUE', Blockly.Arduino.ORDER_ASSIGNMENT) || '0';
-    var varName = Blockly.Arduino.nameDB_.getName(block.getFieldValue('VAR'), Blockly.Variables.NAME_TYPE);
+    // var varName = Blockly.Arduino.nameDB_.getName(block.getFieldValue('VAR'), Blockly.Variables.NAME_TYPE);
+    var varName = Blockly.Variables.getVariable(block.workspace,block.getFieldValue('VAR')).name;
     var varType = Blockly.Arduino.getArduinoType_(Blockly.Types[block.getFieldValue('VARIABLE_SETTYPE_TYPE')]);
     Blockly.Arduino.variables_[block.getFieldValue('VAR')] = varType + ' ' + varName + ' = ' + argument0 + ';';
     return '';
@@ -103,7 +110,8 @@ Blockly.Arduino['variables_set_init'] = function(block) {
 
 Blockly.Arduino['variables_define'] = function(block) {
     var argument0 = Blockly.Arduino.valueToCode(block, 'VALUE', Blockly.Arduino.ORDER_ASSIGNMENT) || '0';
-    var varName = Blockly.Arduino.nameDB_.getName(block.getFieldValue('VAR'), Blockly.Variables.NAME_TYPE);
+    // var varName = Blockly.Arduino.nameDB_.getName(block.getFieldValue('VAR'), Blockly.Variables.NAME_TYPE);
+    var varName = Blockly.Variables.getVariable(block.workspace,block.getFieldValue('VAR')).name;
     Blockly.Arduino.variables_[block.getFieldValue('VAR')] = '#define ' + varName + ' ' + argument0;
     return "";
 };
